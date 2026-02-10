@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify | SecuredDoc</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; padding: 50px; text-align: center; }
+        .container { background: #1e293b; padding: 40px; border-radius: 15px; display: inline-block; width: 400px; }
+        .upload-zone { border: 2px dashed #38bdf8; padding: 30px; border-radius: 10px; margin: 20px 0; cursor: pointer; }
+        button { background: transparent; border: 2px solid #818cf8; color: #818cf8; padding: 15px; width: 100%; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #818cf8; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Document Authenticity Check</h2>
+        <p>Upload a file to verify its cryptographic signature.</p>
+        <form action="/check" method="post" enctype="multipart/form-data">
+            <div class="upload-zone">
+                <input type="file" name="certificate" required>
+            </div>
+            <button type="submit">RUN INTEGRITY CHECK</button>
+        </form>
+    </div>
+</body>
+</html>
